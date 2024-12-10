@@ -12,3 +12,12 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
+model Credenciales{
+  id_credencial       Int     @id @default(autoincrement())
+  id_usuario          Int
+  username            String  
+  password            String  
+  fecha_creacion      DateTime  @default(now())
+}
+
